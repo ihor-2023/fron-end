@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button {
+            border: none;
+            padding: 10px 20px;
+            background-color: var(--button-background, #000);
+            color: var(--button-foreground, #fff);
+            cursor: pointer;
+            transition: background-color 0.2s ease-out, color 0.2s ease-out;
+        }
+    </style>
+</head>
+    <body style="padding: 100px;">
+    <a href="../index.html"><- Back</a>
+    <h1>With JS</h1>
+
+    <button class="button" data-dynamic-button>
+        My Button
+    </button>
+
+    <script>
+        const buttonEl = document.querySelector("[data-dynamic-button]");
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function getRandomColor() {
+            const red = getRandomInt(255);
+            const green = getRandomInt(255);
+            const blue = getRandomInt(255);
+            return `rgb(${red}, ${green}, ${blue})`;
+        }
+
+        buttonEl.addEventListener("click", () => {
+            buttonEl.style.setProperty("--button-background", getRandomColor());
+            buttonEl.style.setProperty("--button-foreground", getRandomColor());
+        });
+    </script>
+    </body>
+</html>

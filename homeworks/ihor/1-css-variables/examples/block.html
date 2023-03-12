@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+        .button {
+            border: none;
+            padding: 10px 20px;
+            background-color: var(--button-background, #000);
+            color: var(--button-foreground, #fff);
+            cursor: pointer;
+            transition: opacity 0.2s ease-out, background-color 0.2s ease-out,
+            color 0.2s ease-out;
+        }
+
+        .button:focus,
+        .button:hover {
+            outline: none;
+            opacity: 0.7;
+        }
+
+        .button--primary {
+            --button-background: rgb(110, 0, 0);
+            --button-foreground: #fff;
+        }
+
+        .button--danger {
+            --button-background: rgb(0, 0, 78);
+            --button-foreground: #fff;
+        }
+    </style>
+</head>
+<body style="padding: 100px;">
+<a href="../index.html"><- Back</a>
+<h1>Block API</h1>
+
+<button class="button button--primary">
+    Save
+</button>
+
+<button class="button button--danger">
+    Delete
+</button>
+</body>
+</html>

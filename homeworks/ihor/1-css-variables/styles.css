@@ -1,0 +1,14 @@
+:root {
+  --color-primary: rgb(0, 0, 105);
+  --color-danger: rgb(172, 0, 0);
+  --color-black: #000;
+  --color-white: #FFF;
+
+  --color-custom: 50, 30;
+}
+
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
